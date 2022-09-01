@@ -1,0 +1,58 @@
+﻿@model  IEnumerable<INTELITRADER_Project.Models.VAGA>
+
+@{
+    ViewBag.Title = "Vagas";
+}
+
+<div>
+    <h2>
+        Vagas
+        <a class="btn btn-success" href="/Vagas/Create">Nova Vaga</a>
+    </h2>
+</div>
+
+
+<Div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Descrição</td>
+                <td>Atribuição</td>
+                <td>Salario</td>
+                <td>Requisito</td>
+                <td>Data de Cadastramento</td>
+                <td>Opções</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.VAIID</td>
+                    <td>@item.VAINOME</td>
+                    <td>@item.VAIDESCRICAO</td>
+                    <td>@item.VAIATRIBUICAO</td>
+                    <td>R$@item.VAISALARIO</td>
+                    <td>@item.VAIREQUISITO</td>
+                    <td>@item.VAIDATACADASTRO</td>
+                    <td>
+                        <a class="btn btn-primary" href="/Vagas/Exibir?id=@item.VAIID">Exibir</a>
+                        <br />
+                        <Br />  
+                        <a class="btn btn-danger" href="~/Vagas/Excluir?id=@item.VAIID">Excluir</a>
+                        <Br />
+                        <Br />
+                        <a class="btn btn-warning" href="/Vagas/Editar?id=@item.VAIID">Editar</a>
+                        <br />
+                        <br />
+                        <a class="btn btn-success" href="/Vagas/Candidatos?id=@item.VAIID">Cadidatos</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+        
+    </table>
+
+</Div>

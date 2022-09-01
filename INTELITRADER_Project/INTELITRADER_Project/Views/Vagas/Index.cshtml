@@ -1,0 +1,172 @@
+﻿@model  IEnumerable<INTELITRADER_Project.Models.VAGA>
+
+@{
+    ViewBag.Title = "Vagas";
+}
+
+<div>
+    <h2>
+        Vagas
+        <a class="btn btn-success" href="/Vagas/Create">Nova Vaga</a>
+    </h2>
+</div>
+
+
+<Div class="row">
+    <table class="table">
+        <thead>
+            <tr>
+                <td>ID</td>
+                <td>Nome</td>
+                <td>Salario</td>
+                <td>Requisito</td>
+                
+              
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+               
+                <tr>
+                    <td>@item.VAIID</td>
+                    <td>@item.VAINOME</td>
+                    <td>R$@item.VAISALARIO</td>
+                    <td>@item.VAIREQUISITO</td>
+                    <td>
+                        <div>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#@item.VAIID">
+                                Detalhes
+                            </button>
+
+                            <div class="modal fade" id="@item.VAIID" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <label>Vaga:</label>
+                                                @item.VAINOME
+                                            </div>
+                                            <div>
+                                                <label>Descrição:</label>
+                                                @item.VAIDESCRICAO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Atribuição:</label>
+                                                @item.VAIATRIBUICAO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Salário:</label>
+                                                R$ @item.VAISALARIO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Requisito:</label>
+                                                @item.VAIREQUISITO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Requisito:</label>
+                                                @item.VAIDATACADASTRO
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br />
+                        <div> 
+                            <a class="btn btn-success" href="/Vagas/Candidatos?id=@item.VAIID">Cadidatos</a>
+
+
+                        </div>
+                       
+                    </td>
+                    <td>
+
+                        <div>
+                            <a class="btn btn-warning" href="/Vagas/Editar?id=@item.VAIID">Editar</a>  
+                        </div>      
+                        <br />
+                        <div>
+                            <a class="btn btn-danger" href="~/Vagas/Excluir?id=@item.VAIID">Excluir</a>
+
+
+                            <div class="modal fade" name="" id="Excluir" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Detalhes</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div>
+                                                <label>Vaga:</label>
+                                                @item.VAINOME
+                                            </div>
+                                            <div>
+                                                <label>Descrição:</label>
+                                                @item.VAIDESCRICAO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Atribuição:</label>
+                                                @item.VAIATRIBUICAO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Salário:</label>
+                                                R$ @item.VAISALARIO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Requisito:</label>
+                                                @item.VAIREQUISITO
+                                            </div>
+                                            <br />
+                                            <div>
+                                                <label>Requisito:</label>
+                                                @item.VAIDATACADASTRO
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Voltar</button>
+                                            <button type="button" class="btn btn-danger" data-dismiss="modal">Excluir</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#Excluir">
+                                Excluir
+                            </button>
+                        </div>
+                        
+                    </td>
+    
+                </tr>
+               
+                }
+
+
+           
+        </tbody>
+        
+    </table>
+
+</Div>

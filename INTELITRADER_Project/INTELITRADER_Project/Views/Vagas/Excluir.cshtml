@@ -1,0 +1,45 @@
+﻿@model INTELITRADER_Project.Models.VAGA
+@{
+    ViewBag.Title = "Excluir";
+}
+
+<h2>Excluir Vaga</h2>
+
+<Div>
+    <form action="/Vagas/ExcluirConfirmar?id=@Model.VAIID" method="post">
+
+        <div>
+            <Label>Nome:</Label>
+        </div>
+        <div>
+           @Model.VAINOME
+        </div>
+        <br />
+        <div>
+            <Label>Descrição:</Label>
+        </div>
+        <div>
+            @Model.VAIDESCRICAO
+        </div>
+        <br />
+        <div>
+            <Label>Atribuição:</Label>
+        </div>
+        <div>
+            @Model.VAIATRIBUICAO
+        </div>
+        <br />
+        <div>
+            <Label>Requisito:</Label>
+        </div>
+        <div>
+            @Model.VAIREQUISITO
+        </div>
+        <br />  
+        <div>
+            <a class="btn btn-default" href="/Vagas/Index">Voltar</a>
+            <button type="submit" class="btn btn-danger">Excluir</button>
+        </div>
+    </form>
+</Div>
+

@@ -1,0 +1,26 @@
+﻿@model  IEnumerable<INTELITRADER_Project.Models.VAGA>
+
+@{
+    ViewBag.Title = "Escolha a sua vaga";
+}
+
+<Div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-md-3">
+
+        <div class="panel panel-primary">
+            <div class="panel-heading">@item.VAINOME</div>
+            <div class="panel-body">
+                @item.VAIDESCRICAO
+            <span class="label label-success">R$ @item.VAISALARIO</span>
+        </div>
+            <div class="panel-footer">
+                <a class="btn btn-default" href="/Vagas/Inscricao/@item.VAIID">Inscrever-se</a>
+            </div>
+
+        </div>
+        </div>
+    }
+</Div>

@@ -1,0 +1,28 @@
+﻿<link href="~/Content/Site.css" rel="stylesheet" />
+@model IEnumerable<INTELITRADER_Project.Models.QtdCandidatosPorVaga>
+@{
+    ViewBag.Title = "Dashboard";
+}
+
+<nav class="navbar navbar-expand-lg margin">
+    <div class="text-center">
+        <h2>Quantidade de candidatos por vaga</h2>
+    </div>
+
+    <div class="">
+        <div>
+
+            @foreach (var item in Model)
+            {
+                <a href="/Vagas/Candidatos?id=@item.Cod">
+                    <div class="col-md-2 divCursoItemDashboard">
+                        <div><h2> @item.Quantidade</h2></div>
+
+                        <div>@item.Vaga</div>
+                    </div>
+                </a>
+            }
+        </div>
+    </div>
+</nav>
+    

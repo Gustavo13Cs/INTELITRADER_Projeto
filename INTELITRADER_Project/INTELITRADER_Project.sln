@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32630.192
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INTELITRADER_Project", "INTELITRADER_Project\INTELITRADER_Project.csproj", "{971BE43F-D444-4E8A-9117-BD28E134E895}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INTELUTRADE_Test", "INTELUTRADE_Test\INTELUTRADE_Test.csproj", "{E8F97D2D-56CF-4A31-B053-5B63D11D43D9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{971BE43F-D444-4E8A-9117-BD28E134E895}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971BE43F-D444-4E8A-9117-BD28E134E895}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971BE43F-D444-4E8A-9117-BD28E134E895}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971BE43F-D444-4E8A-9117-BD28E134E895}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8F97D2D-56CF-4A31-B053-5B63D11D43D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8F97D2D-56CF-4A31-B053-5B63D11D43D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8F97D2D-56CF-4A31-B053-5B63D11D43D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8F97D2D-56CF-4A31-B053-5B63D11D43D9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {445FA5DB-425A-4F2B-B138-98E7E18CEF87}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,38 @@
+﻿@model INTELITRADER_Project.Models.VAGA
+@{
+    ViewBag.Title = "Editar";
+}
+
+<h2>Editar Vaga</h2>
+
+<Div>
+    <form action="/Vagas/Editar?id=@Model.VAIID" method="post">
+
+        <div>
+            <Label>Nome:</Label>
+            <input type="text" name="nome" value="@Model.VAINOME" maxlength="500" required />
+        </div>
+
+        <div>
+            <Label>Descrição:</Label>
+            <input type="text" name="descricao" value="@Model.VAIDESCRICAO" maxlength="1000" required />
+        </div>
+        <div>
+            <Label>Atribuição:</Label>
+            <input type="text" name="atribuicao" value="@Model.VAIATRIBUICAO" maxlength="1000" required />
+        </div>
+        <div>
+            <Label>Salario:</Label>
+            <input type="text" name="salario" step="0.010"  value="@Model.VAISALARIO.ToString()" required />
+        </div>
+        <div>
+            <Label>Requisito:</Label>
+            <input type="text" name="requisito" value="@Model.VAIREQUISITO" maxlength="1000" required />
+        </div>
+
+        <br />
+        <a class="btn btn-default" href="/Vagas/Index">Voltar</a>
+        <button class="btn btn-success" type="submit">Salvar</button>
+    </form>
+</Div>
+

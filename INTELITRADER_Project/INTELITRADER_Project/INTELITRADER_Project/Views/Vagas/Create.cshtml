@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Nova Vaga</h2>
+
+<div>
+    <form action="/Vagas/Create/" method="post">
+
+        <div>
+            <Label>Nome:</Label>
+            <input type="text" name="nome" maxlength="500" required />
+        </div>
+      
+        <div>
+            <Label>Descrição:</Label>
+            <input type="text" name="descricao" maxlength="1000" required />
+        </div>
+        <div>
+            <Label>Atribuição:</Label>
+            <input type="text" name="atribuicao" maxlength="1000" required />
+        </div>
+        <div>
+            <Label>Salario:</Label>
+            <input type="text" name="salario" step="0.010" required />
+        </div>
+        <div>
+        <Label>Requisito:</Label>
+        <input type="text" name="requisito" maxlength="1000" required />
+        </div>
+
+        <br />
+        <a class="btn btn-default" href="/Vagas/Index">Voltar</a>
+        <button class="btn btn-success" type="submit">Salvar</button>
+    </form>
+</div>
+
+
